@@ -210,3 +210,24 @@ console.log(num)
 function max2(c, d) {
     return c > d ? c : d;
 }
+
+// FACTORY FUNCTION (funções de fábrica)
+// É pra facilitar o uso de vários objetos na mesma função.
+
+function criarCelular(marcaCelular,tamanhoTela,capacidadeBateria) {
+    return{
+        marcaCelular,
+        tamanhoTela,
+        capacidadeBateria,
+        ligar(){
+            console.log("Fazendo ligação...")
+        }
+    }
+}
+
+const celular1 = criarCelular('Motorola',5.5,5000);
+console.log(celular1);
+
+const celular2 = criarCelular('Samsung',5.2,5200);
+console.log(celular2);
+
